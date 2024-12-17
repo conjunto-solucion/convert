@@ -11,7 +11,7 @@ sencilla.
 En el directorio principal:
 
 ```
-$ gcc -o ./convert ./src/convert.c
+$ gcc -o ./convert ./src/convert.c -lm
 ```
 
 ## Uso
@@ -26,49 +26,20 @@ Ejemplo:
 
 Creará los archivos test.pdf y test2.pdf en el directorio actual.
 
-## Notas
+## Formatos soportados
 
-El programa se vale de LibreOffice para realizar las conversiones.
-Es capaz de realizar las conversiones que permita su instalación de LibreOffice (en mi caso LibreOffice 6.4.7.2), tales como:
+El programa se vale de su instalación de LibreOffice para realizar las conversiones, excepto por la conversión de .png a .ico.
 
-* Formatos de texto
+### Conversiones con `soffice --convert-to`
 
-    .docx → .pdf, .doc, .odt, .txt, .html, .rtf, etc.
+* Convierte entre formatos de texto: docx, pdf, doc, odt, txt, html, rtf.
 
-    .odt → .pdf, .docx, .doc, .txt, .html, .rtf, etc.
+* Convierte entre formatos de hoja de cálculo: xlsx, pdf, ods, csv, html, xls.
 
-    .doc → .pdf, .docx, .odt, .txt, .html, .rtf, etc.
+* Convierte entre formatos de presentación: .pptx, pdf, odp, ppt.
 
-* Formatos de hoja de cálculo
+* Convierte entre formatos gráficos: svg, pdf, png, jpg.
 
-    .xlsx → .pdf, .ods, .csv, .html, .xls, etc.
+### Otras conversiones
 
-    .ods → .pdf, .xlsx, .csv, .html, .xls, etc.
-
-    .xls → .pdf, .xlsx, .ods, .csv, .html, etc.
-
-    .csv → .pdf, .xlsx, .ods, .xls, etc.
-
-* Formatos de presentación
-
-    .pptx → .pdf, .odp, .ppt, etc.
-
-    .odp → .pdf, .pptx, .ppt, etc.
-
-    .ppt → .pdf, .pptx, .odp, etc.
-
-* Formatos gráficos
-
-    .svg → .pdf, .png, .jpg, etc.
-
-    .png → .pdf, .svg, .jpg, etc.
-
-    .jpg → .pdf, .png, .svg, etc.
-
-* Otros formatos
-
-    .html → .pdf, .docx, .odt, etc.
-
-    .txt → .pdf, .docx, .odt, etc.
-
-    .rtf → .pdf, .docx, .odt, etc.
+* Convierte png a ico
