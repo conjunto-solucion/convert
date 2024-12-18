@@ -28,9 +28,7 @@ Creará los archivos test.pdf y test2.pdf en el directorio actual.
 
 ## Formatos soportados
 
-El programa se vale de su instalación de LibreOffice para realizar las conversiones, excepto por la conversión de .png a .ico.
-
-### Conversiones con `soffice --convert-to`
+### Conversiones con LibreOffice
 
 * Convierte entre formatos de texto: docx, pdf, doc, odt, txt, html, rtf.
 
@@ -39,6 +37,10 @@ El programa se vale de su instalación de LibreOffice para realizar las conversi
 * Convierte entre formatos de presentación: .pptx, pdf, odp, ppt.
 
 * Convierte entre formatos gráficos: svg, pdf, png, jpg.
+
+### Conversiones con stb_image
+
+* Convierte entre formatos gráficos: jpeg, png, tga, bmp.
 
 ### Otras conversiones
 
